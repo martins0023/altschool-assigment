@@ -35,8 +35,8 @@ export function evenNumbersWithin(destination) {
     let count = 0;
     const arrayOfEvenNumbers = [];
 
-    // Corrected loop to start from 1 to potentially match test expectations
-    for (let i = 1; i <= destination; i++) {
+    // The test case expects 0 to be included, so we start the loop from 0
+    for (let i = 0; i <= destination; i++) {
         if (i % 2 === 0) {
             count++;
             sum += i;
