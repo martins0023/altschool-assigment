@@ -30,7 +30,7 @@ export function sumOfNumbersTo(destination) {
  * @returns the object containing count, sum, arrayOfEvenNumbers from 1 to destination
  */
 export function evenNumbersWithin(destination) {
-    console.log(destination)
+    // console.log(destination)
     // get the number from 0 to destination
     let sum = 0
     let count = 0
