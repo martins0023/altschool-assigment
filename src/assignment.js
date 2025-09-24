@@ -30,17 +30,25 @@ export function sumOfNumbersTo(destination) {
  * @returns the object containing count, sum, arrayOfEvenNumbers from 1 to destination
  */
 export function evenNumbersWithin(destination) {
+    console.log(destination)
     // get the number from 0 to destination
-    let sum = 0;
-    let count = 0;
-    const arrayOfEvenNumbers = [];
+    let sum = 0
+    let count = 0
+    const arrayOfEvenNumbers = []
 
-    // The test case expects 0 to be included, so we start the loop from 0
+    if (typeof destination !== 'number' || destination < 0) {
+        return {
+            count,
+            sum,
+            arrayOfEvenNumbers,
+        }
+    }
+
     for (let i = 0; i <= destination; i++) {
         if (i % 2 === 0) {
-            count++;
-            sum += i;
-            arrayOfEvenNumbers.push(i);
+            arrayOfEvenNumbers.push(i)
+            sum += i
+            count += 1
         }
     }
 
@@ -48,7 +56,7 @@ export function evenNumbersWithin(destination) {
         count,
         sum,
         arrayOfEvenNumbers,
-    };
+    }
 }
 
 /**
